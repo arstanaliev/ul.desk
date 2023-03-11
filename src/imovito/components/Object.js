@@ -198,7 +198,12 @@ const Object = () => {
                     <div style={{
                         textAlign: "center"
                     }}>
-                        <button onClick={() => setShow(!Show)} className="object-btn">Смотреть все объекты</button>
+                        <button onClick={() => {
+                            setShow(!Show)
+                            btn.innerHTML = Show ? "Смотреть все объекты" : "Смотреть меньше объектов"
+                        }} className="object-btn" style={{
+                            background: Show ? "red" : '#007BFF'
+                        }}>Смотреть все объекты</button>
                     </div>
                 </div>
             </div>

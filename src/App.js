@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header";
-import Section from "./components/Section";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import AboutUs from "./components/AboutUs";
-import Dishes from "./components/Dishes";
-import Clients from "./components/Clients";
-import Subscribe from "./components/Subscribe";
+import AppDesk from "./App.desk";
+import {Route, Routes} from "react-router-dom";
+import AppFolio from "./web-folio/App.folio";
+import Object from "./imovito/components/Object";
+
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <Section/>
-            <Hero/>
-            <AboutUs/>
-            <Dishes/>
-            <Clients/>
-            <Subscribe/>
-            <Footer/>
+            <Routes>
+                <Route path={"/"} element={<AppDesk/>}/>
+                <Route path={"/app-folio"} element={<AppFolio/>}/>
+                <Route path={"/object"} element={<Object/>}/>
+            </Routes>
         </div>
     );
 }
